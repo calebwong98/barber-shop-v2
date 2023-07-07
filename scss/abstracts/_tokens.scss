@@ -10,12 +10,12 @@ $font-family-base: $ff-sans;
 $font-family-accent: $ff-serif;
 
 $font-size-300: $fs-300;
-$font-size-400: $fs-400;
+$font-size-400: $fs-400; // Default
 $font-size-500: $fs-500;
-$font-size-600: $fs-600;
+$font-size-600: $fs-600; // Heading
 $font-size-700: $fs-700;
 $font-size-800: $fs-800;
-$font-size-900: $fs-900;
+$font-size-900: $fs-900; // Hero
 
 $font-weight-default: $fw-400;
 $font-weight-semi-bold: $fw-500;
@@ -54,27 +54,37 @@ $color-accent-700: $clr-acc-700;
 $color-accent-800: $clr-acc-800;
 $color-accent-900: $clr-acc-900;
 
-// _sizes
-$size-1: $sz-1;
-$size-2: $sz-2;
-$size-3: $sz-3;
-$size-4: $sz-4;
-$size-5: $sz-5;
-$size-6: $sz-6;
-$size-7: $sz-7;
-$size-8: $sz-8;
-$size-9: $sz-9;
-$size-10: $sz-10;
-$size-11: $sz-11;
-$size-12: $sz-12;
-$size-13: $sz-13;
-$size-14: $sz-14;
-$size-15: $sz-15;
+$color-text-default: $color-primary-700;
+$color-background-default: $color-primary-100;
+$color-text-interactive-default: $color-accent-400;
+$color-text-interactive-hover: $color-accent-500;
 
+// _sizes
+$size-1: $sz-1; // 0.25rem,
+$size-2: $sz-2; // 0.5rem,
+$size-3: $sz-3; // 0.75rem,
+$size-4: $sz-4; // 1rem,
+$size-5: $sz-5; // 1.25rem,
+$size-6: $sz-6; // 1.5rem,
+$size-7: $sz-7; // 1.75rem,
+$size-8: $sz-8; // 2rem,
+$size-9: $sz-9; // 2.5rem,
+$size-10: $sz-10; // 3rem,
+$size-11: $sz-11; // 4rem,
+$size-12: $sz-12; // 5rem,
+$size-13: $sz-13; // 6rem,
+$size-14: $sz-14; // 8rem,
+$size-15: $sz-15; // 10rem,
+
+// .spacing
 $letter-spacing-loose: 0.16em;
 
+// .borderradius
 $border-radius-1: $size-2;
 $border-radius-2: $size-4;
+$border-radius-3: $size-4;
+$border-radius-4: $size-4;
+$border-radius-5: $size-4;
 
 // _boxshadow
 $box-shadow-1: $bs-1;
@@ -91,16 +101,16 @@ $body-font-family: $font-family-base;
 $body-font-size: $font-size-400;
 $body-font-weight: $font-weight-default;
 
-$body-color-default: $color-primary-700;
-$body-background-color: $color-primary-100;
+$body-color-default: $color-text-default;
+$body-background-color: $color-background-default;
 $body-line-height: 1.5;
 
 // _general / a
-$link-color: $color-accent-400;
-$link-color-hover: $color-accent-500;
+$link-color: $color-text-interactive-default;
+$link-color-hover: $color-text-interactive-hover;
 
 // _mixins / @mixin heading
-$heading-color-default: $body-color-default;
+$heading-color-default: $color-text-default;
 
 $heading-font-family: $font-family-accent;
 $heading-font-weight: $font-weight-bold;
@@ -127,13 +137,17 @@ $container-max-width: 60rem;
 $container-max-width-narrow: 40rem;
 $container-max-width-wide: 75rem;
 
+// _spacing / .spacing
+$hero-padding-block: clamp(15rem, 15vh, 20rem);
+$section-padding-block: clamp(3rem, 10vh, 7rem);
+
 // Components ______________________________________________________
 // _buttons / .button
-$button-font-family: $body-font-family;
-$button-font-size: $body-font-size;
+$button-font-family: $font-family-base;
+$button-font-size: $font-size-400;
 $button-font-weight: $font-weight-bold;
 
-$button-padding-default: 0.75em 2em;
+$button-padding-default: $size-3 $size-9;
 $button-text-transform: none;
 $button-border-default: 0;
 $button-border-radius: $border-radius-1;
@@ -151,7 +165,7 @@ $button-accent-color-hover: $color-neutral-100;
 $button-accent-background-hover: $color-accent-500;
 
 // _cards / .card
-$card-font-family: $body-font-family;
+$card-font-family: $font-family-base;
 
 $card-flow-spacing: $size-2;
 $card-padding: $size-8;
@@ -160,8 +174,8 @@ $card-line-height: 1.25;
 $card-border-radius: $border-radius-2;
 $card-box-shadow: $box-shadow-1;
 
-$card-color-default: $body-background-color;
-$card-background-default: $color-primary-100;
+$card-color-default: $color-text-default;
+$card-background-default: $color-background-default;
 
 $card-heading-font-size: $font-size-600;
 $card-heading-color-default: $card-color-default;

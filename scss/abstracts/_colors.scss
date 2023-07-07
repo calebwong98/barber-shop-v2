@@ -138,6 +138,17 @@ $-clr-red-700: hsl(0 75% 30%);
 $-clr-red-800: hsl(0 75% 17.5%);
 $-clr-red-900: hsl(0 75% 7.5%);
 
+// barber-shop
+$-clr-orange-300: hsl(8 62% 75%);
+$-clr-orange-400: hsl(8 62% 55%);
+$-clr-orange-500: hsl(8 62% 35%);
+$-clr-brown-100: hsl(33 24% 92%);
+$-clr-brown-200: hsl(33 25% 88%);
+$-clr-brown-300: hsl(33 23% 69%);
+$-clr-brown-400: hsl(22 31% 44%);
+$-clr-brown-700: hsl(20 23% 23%);
+$-clr-brown-800: hsl(18 23% 10%);
+
 $colors: (
   'neutral': (
     '000': $-clr-white,
@@ -153,26 +164,17 @@ $colors: (
     '1000': $-clr-black,
   ),
   'accent': (
-    '100': $-clr-deeppink-100,
-    '200': $-clr-deeppink-200,
-    '300': $-clr-deeppink-300,
-    '400': $-clr-deeppink-400,
-    '500': $-clr-deeppink-500,
-    '600': $-clr-deeppink-600,
-    '700': $-clr-deeppink-700,
-    '800': $-clr-deeppink-800,
-    '900': $-clr-deeppink-900,
+    '300': $-clr-orange-300,
+    '400': $-clr-orange-400,
+    '500': $-clr-orange-500,
   ),
   'primary': (
-    '100': $-clr-skyblue-100,
-    '200': $-clr-skyblue-200,
-    '300': $-clr-skyblue-300,
-    '400': $-clr-skyblue-400,
-    '500': $-clr-skyblue-500,
-    '600': $-clr-skyblue-600,
-    '700': $-clr-skyblue-700,
-    '800': $-clr-skyblue-800,
-    '900': $-clr-skyblue-900,
+    '100': $-clr-brown-100,
+    '200': $-clr-brown-200,
+    '300': $-clr-brown-300,
+    '400': $-clr-brown-400,
+    '700': $-clr-brown-700,
+    '800': $-clr-brown-800,
   ),
 );
 $clr-neu-000: var(--neutral-000);
