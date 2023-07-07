@@ -1,0 +1,167 @@
+@use 'colors' as *;
+@use 'typography' as *;
+@use 'sizes' as *;
+@use 'boxshadow' as *;
+
+// ############################################################### //
+// GLOBAL CONTEXTUAL TOKENS
+// _typography
+$font-family-base: $ff-sans;
+$font-family-accent: $ff-serif;
+
+$font-size-300: $fs-300;
+$font-size-400: $fs-400;
+$font-size-500: $fs-500;
+$font-size-600: $fs-600;
+$font-size-700: $fs-700;
+$font-size-800: $fs-800;
+$font-size-900: $fs-900;
+
+$font-weight-default: $fw-400;
+$font-weight-semi-bold: $fw-500;
+$font-weight-bold: $fw-700;
+
+// _colors
+$color-neutral-000: $clr-neu-000;
+$color-neutral-100: $clr-neu-100;
+$color-neutral-200: $clr-neu-200;
+$color-neutral-300: $clr-neu-300;
+$color-neutral-400: $clr-neu-400;
+$color-neutral-500: $clr-neu-500;
+$color-neutral-600: $clr-neu-600;
+$color-neutral-700: $clr-neu-700;
+$color-neutral-800: $clr-neu-800;
+$color-neutral-900: $clr-neu-900;
+$color-neutral-1000: $clr-neu-1000;
+
+$color-primary-100: $clr-prm-100;
+$color-primary-200: $clr-prm-200;
+$color-primary-300: $clr-prm-300;
+$color-primary-400: $clr-prm-400;
+$color-primary-500: $clr-prm-500;
+$color-primary-600: $clr-prm-600;
+$color-primary-700: $clr-prm-700;
+$color-primary-800: $clr-prm-800;
+$color-primary-900: $clr-prm-900;
+
+$color-accent-100: $clr-acc-100;
+$color-accent-200: $clr-acc-200;
+$color-accent-300: $clr-acc-300;
+$color-accent-400: $clr-acc-400;
+$color-accent-500: $clr-acc-500;
+$color-accent-600: $clr-acc-600;
+$color-accent-700: $clr-acc-700;
+$color-accent-800: $clr-acc-800;
+$color-accent-900: $clr-acc-900;
+
+// _sizes
+$size-1: $sz-1;
+$size-2: $sz-2;
+$size-3: $sz-3;
+$size-4: $sz-4;
+$size-5: $sz-5;
+$size-6: $sz-6;
+$size-7: $sz-7;
+$size-8: $sz-8;
+$size-9: $sz-9;
+$size-10: $sz-10;
+$size-11: $sz-11;
+$size-12: $sz-12;
+$size-13: $sz-13;
+$size-14: $sz-14;
+$size-15: $sz-15;
+
+$letter-spacing-loose: 0.16em;
+
+$border-radius-1: $size-2;
+$border-radius-2: $size-4;
+
+// _boxshadow
+$box-shadow-1: $bs-1;
+$box-shadow-2: $bs-2;
+$box-shadow-3: $bs-3;
+$box-shadow-4: $bs-4;
+$box-shadow-5: $bs-5;
+
+// ############################################################### //
+// COMPONENT CONTEXTUAL TOKENS
+// Base __________________________________________________________
+// _general / body
+$body-font-family: $font-family-base;
+$body-font-size: $font-size-400;
+$body-font-weight: $font-weight-default;
+
+$body-color-default: $color-primary-700;
+$body-background-color: $color-primary-100;
+$body-line-height: 1.5;
+
+// _general / a
+$link-color: $color-accent-400;
+$link-color-hover: $color-accent-500;
+
+// _mixins / @mixin heading
+$heading-color-default: $body-color-default;
+
+$heading-font-family: $font-family-accent;
+$heading-font-weight: $font-weight-bold;
+
+$heading-letter-spacing: $letter-spacing-loose;
+$heading-line-height: 1;
+$heading-text-transform: uppercase;
+
+// Layout __________________________________________________________
+// _even-columns / .even-columns
+// _grid-auto-fit / .grid-auto-fit
+$grid-gap: $size-6;
+
+// _flex-group / .flex-group
+$flex-group-gap: $size-4;
+
+// Utility _________________________________________________________
+// _flow / .flow
+$flow-spacer: $size-4;
+
+// _container / .container
+$container-min-margin-inline: $size-4;
+$container-max-width: 60rem;
+$container-max-width-narrow: 40rem;
+$container-max-width-wide: 75rem;
+
+// Components ______________________________________________________
+// _buttons / .button
+$button-font-family: $body-font-family;
+$button-font-size: $body-font-size;
+$button-font-weight: $font-weight-bold;
+
+$button-padding-default: 0.75em 2em;
+$button-text-transform: none;
+$button-border-default: 0;
+$button-border-radius: $border-radius-1;
+
+$button-transition: 0;
+
+$button-primary-color: $color-neutral-100;
+$button-primary-background: $color-primary-700;
+$button-primary-color-hover: $color-neutral-100;
+$button-primary-background-hover: $color-primary-800;
+
+$button-accent-color: $color-neutral-100;
+$button-accent-background: $color-accent-400;
+$button-accent-color-hover: $color-neutral-100;
+$button-accent-background-hover: $color-accent-500;
+
+// _cards / .card
+$card-font-family: $body-font-family;
+
+$card-flow-spacing: $size-2;
+$card-padding: $size-8;
+$card-padding: $size-8;
+$card-line-height: 1.25;
+$card-border-radius: $border-radius-2;
+$card-box-shadow: $box-shadow-1;
+
+$card-color-default: $body-background-color;
+$card-background-default: $color-primary-100;
+
+$card-heading-font-size: $font-size-600;
+$card-heading-color-default: $card-color-default;
