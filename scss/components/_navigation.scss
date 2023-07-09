@@ -1,0 +1,17 @@
+@use '../abstracts/' as *;
+
+// .primary-navigation
+.nav {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: $navigation-spacing;
+
+  a {
+    // @mixin heading(($fs, $color: $heading-color-default))
+    @include heading($navigation-font-size, $navigation-color);
+    &:is(:hover, :focus) {
+      color: $navigation-color-hover;
+    }
+  }
+}

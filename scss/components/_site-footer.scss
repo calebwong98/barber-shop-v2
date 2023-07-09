@@ -1,0 +1,17 @@
+@use '../abstracts/' as *;
+
+.site-footer {
+  margin-top: auto;
+  padding-block: $site-footer-padding-block;
+
+  color: $site-footer-color;
+  background-color: $site-footer-background-color;
+
+  &__layout {
+    display: flex;
+    flex-direction: column;
+    gap: $site-footer-gap;
+    justify-content: $site-footer-justification;
+    align-items: $site-footer-alignment;
+  }
+}

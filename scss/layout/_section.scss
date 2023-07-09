@@ -1,0 +1,40 @@
+@use '../abstracts' as *;
+
+.section.hero {
+  .section__layout {
+    display: flex;
+    text-align: center;
+
+    .cta {
+      margin-inline: auto;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    @include mq($desktop) {
+      flex-direction: row;
+      text-align: start;
+
+      .cta {
+        flex-direction: row;
+        margin-inline: 0;
+      }
+    }
+  }
+}
+
+.section {
+  padding-block: $hero-padding-block;
+
+  &__layout {
+    display: flex;
+    flex-direction: column;
+    gap: $section-gap;
+    justify-content: $section-justification;
+    align-items: $section-alignment;
+  }
+
+  &:nth-child(even) {
+    background-color: $section-background-color-alternate;
+  }
+}

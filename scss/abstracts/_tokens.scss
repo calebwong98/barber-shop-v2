@@ -4,7 +4,8 @@
 @use 'boxshadow' as *;
 
 // ############################################################### //
-// GLOBAL CONTEXTUAL TOKENS
+// -------------------GLOBAL CONTEXTUAL TOKENS-------------------- //
+
 // _typography
 $font-family-base: $ff-sans;
 $font-family-accent: $ff-serif;
@@ -54,10 +55,15 @@ $color-accent-700: $clr-acc-700;
 $color-accent-800: $clr-acc-800;
 $color-accent-900: $clr-acc-900;
 
-$color-text-default: $color-primary-700;
+$color-text-default: $color-primary-800;
+$color-text-alternate: $color-primary-100;
 $color-background-default: $color-primary-100;
-$color-text-interactive-default: $color-accent-400;
-$color-text-interactive-hover: $color-accent-500;
+$color-background-alternate: $color-primary-200;
+
+$color-accent-primary: $color-primary-100;
+
+$color-text-interactive-default: $color-primary-100;
+$color-text-interactive-hover: $color-accent-300;
 
 // _sizes
 $size-1: $sz-1; // 0.25rem,
@@ -78,6 +84,8 @@ $size-15: $sz-15; // 10rem,
 
 // .spacing
 $letter-spacing-loose: 0.16em;
+$padding-block-default: $size-8;
+$gap-default: $size-6;
 
 // .borderradius
 $border-radius-1: $size-2;
@@ -93,9 +101,15 @@ $box-shadow-3: $bs-3;
 $box-shadow-4: $bs-4;
 $box-shadow-5: $bs-5;
 
+// .breakpoints
+$tablet: small;
+$desktop: medium;
+
 // ############################################################### //
-// COMPONENT CONTEXTUAL TOKENS
-// Base __________________________________________________________
+// ------------------COMPONENT CONTEXTUAL TOKENS------------------ //
+
+// BASE __________________________________________________________
+
 // _general / body
 $body-font-family: $font-family-base;
 $body-font-size: $font-size-400;
@@ -109,8 +123,8 @@ $body-line-height: 1.5;
 $link-color: $color-text-interactive-default;
 $link-color-hover: $color-text-interactive-hover;
 
-// _mixins / @mixin heading
-$heading-color-default: $color-text-default;
+// _mixins / heading($fs, $color: $heading-color-default)
+$heading-color-default: $color-text-alternate;
 
 $heading-font-family: $font-family-accent;
 $heading-font-weight: $font-weight-bold;
@@ -119,29 +133,40 @@ $heading-letter-spacing: $letter-spacing-loose;
 $heading-line-height: 1;
 $heading-text-transform: uppercase;
 
-// Layout __________________________________________________________
-// _even-columns / .even-columns
-// _grid-auto-fit / .grid-auto-fit
-$grid-gap: $size-6;
-
-// _flex-group / .flex-group
-$flex-group-gap: $size-4;
-
-// Utility _________________________________________________________
-// _flow / .flow
-$flow-spacer: $size-4;
+// LAYOUT ________________________________________________________
 
 // _container / .container
-$container-min-margin-inline: $size-4;
+$container-min-margin-inline: $size-8;
 $container-max-width: 60rem;
 $container-max-width-narrow: 40rem;
 $container-max-width-wide: 75rem;
 
-// _spacing / .spacing
-$hero-padding-block: clamp(15rem, 15vh, 20rem);
-$section-padding-block: clamp(3rem, 10vh, 7rem);
+// _even-columns / .even-columns
+// _grid-auto-fit / .grid-auto-fit
+$grid-gap: $gap-default;
 
-// Components ______________________________________________________
+// _flex-group / .flex-group
+$flex-group-gap: $gap-default;
+
+// _flow / .flow
+$flow-spacer: $size-10;
+
+// _section / .section
+$hero-padding-block: $size-13;
+$section-padding-block: $size-13;
+
+$section-gap: $gap-default;
+$section-justification: space-between;
+$section-alignment: center;
+
+$section-background-color-alternate: $color-background-alternate;
+
+// UTILITY _______________________________________________________
+
+//
+
+// COMPONENTS ____________________________________________________
+// *
 // _buttons / .button
 $button-font-family: $font-family-base;
 $button-font-size: $font-size-400;
@@ -163,12 +188,11 @@ $button-accent-color: $color-neutral-100;
 $button-accent-background: $color-accent-400;
 $button-accent-color-hover: $color-neutral-100;
 $button-accent-background-hover: $color-accent-500;
-
+// *
 // _cards / .card
 $card-font-family: $font-family-base;
 
 $card-flow-spacing: $size-2;
-$card-padding: $size-8;
 $card-padding: $size-8;
 $card-line-height: 1.25;
 $card-border-radius: $border-radius-2;
@@ -179,3 +203,30 @@ $card-background-default: $color-background-default;
 
 $card-heading-font-size: $font-size-600;
 $card-heading-color-default: $card-color-default;
+
+// _site-header / .site-header
+$site-header-padding-block: $padding-block-default;
+
+$site-header-color: $color-text-alternate;
+$site-header-background-color: $color-text-default;
+
+$site-header-gap: $gap-default;
+$site-header-justification: space-between;
+$site-header-alignment: center;
+
+// _navigation / .nav
+$navigation-spacing: $size-9;
+
+$navigation-font-size: $font-size-400;
+$navigation-color: $color-text-interactive-default;
+$navigation-color-hover: $color-text-interactive-hover;
+
+// _site-footer / .site-footer
+$site-footer-padding-block: $padding-block-default;
+
+$site-footer-color: $color-text-alternate;
+$site-footer-background-color: $color-text-default;
+
+$site-footer-gap: $gap-default;
+$site-footer-justification: space-between;
+$site-footer-alignment: center;
