@@ -108,7 +108,7 @@ $desktop: medium;
 // ############################################################### //
 // ------------------COMPONENT CONTEXTUAL TOKENS------------------ //
 
-// BASE __________________________________________________________
+// ___________________________ BASE ______________________________ //
 
 // _general / body
 $body-font-family: $font-family-base;
@@ -141,7 +141,7 @@ $heading-color-3: $color-primary-400;
 
 $subheading-margin-top: $size-4;
 
-// LAYOUT ________________________________________________________
+// __________________________ LAYOUT _____________________________ //
 
 // _container / .container
 $container-min-margin-inline: $size-8;
@@ -173,17 +173,20 @@ $section-text-align: center;
 
 $section-background-color-alternate: $color-background-alternate;
 
-// UTILITY _______________________________________________________
+// __________________________ UTILITY ____________________________ //
 
 //
 
-// COMPONENTS ____________________________________________________
+// _________________________ COMPONENTS __________________________ //
+
+// BASIC COMPONENTS_______________________________________________
 
 // _buttons / .button
 $button-font-family: $font-family-base;
 $button-font-size: $body-font-size;
 $button-font-weight: $font-weight-bold;
 
+$button-width: fit-content;
 $button-padding-default: $size-3 $size-9;
 $button-text-transform: none;
 $button-border-default: 0;
@@ -233,7 +236,9 @@ $form-input-border-focus: 3px solid $color-primary-400;
 $form-input-color: $body-color-default;
 $form-input-background-color: $color-neutral-000;
 
-// _site-header / .site-header
+// SITE NAVIGATION________________________________________________
+
+// _site-navigation / .site-header
 $site-header-padding-block: $padding-block-default;
 
 $site-header-color: $color-text-alternate;
@@ -243,14 +248,14 @@ $site-header-gap: $gap-default;
 $site-header-justification: space-between;
 $site-header-alignment: center;
 
-// _navigation / .nav
+// _site-navigation / .nav
 $navigation-spacing: $gap-default;
 
 $navigation-font-size: $body-font-size;
 $navigation-color: $color-text-interactive-default;
 $navigation-color-hover: $color-text-interactive-hover;
 
-// _site-footer / .site-footer
+// _site-navigation / .site-footer
 $site-footer-padding-block: $padding-block-default;
 
 $site-footer-color: $color-text-alternate;
