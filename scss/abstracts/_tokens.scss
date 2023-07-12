@@ -5,6 +5,8 @@
 
 // ############################################################### //
 // -------------------GLOBAL CONTEXTUAL TOKENS-------------------- //
+$active-theme: $light;
+$compile-dark-mode: true;
 
 // _typography
 $font-family-base: $ff-sans;
@@ -237,6 +239,15 @@ $form-input-color: $body-color-default;
 $form-input-background-color: $color-neutral-000;
 
 // SITE NAVIGATION________________________________________________
+
+// _logo / .logo
+$logo-size-default: 15rem;
+$logo-size-header: $logo-size-default;
+$logo-size-footer: $logo-size-default;
+
+$logo-fill-default: $color-primary-300;
+$logo-fill-header: $logo-fill-default;
+$logo-fill-footer: $logo-fill-default;
 
 // _site-navigation / .site-header
 $site-header-padding-block: $padding-block-default;

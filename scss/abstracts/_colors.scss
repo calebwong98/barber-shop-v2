@@ -11,15 +11,15 @@ $-clr-gray-700: hsl(0 0% 30%);
 $-clr-gray-800: hsl(0 0% 17.5%);
 $-clr-gray-900: hsl(0 0% 7.5%);
 $-clr-black: hsl(0 0% 0%);
-$-clr-orange-100: hsl(24 75% 95%);
-$-clr-orange-200: hsl(24 75% 82.5%);
-$-clr-orange-300: hsl(24 75% 70%);
-$-clr-orange-400: hsl(24 75% 60%);
-$-clr-orange-500: hsl(24 75% 50%);
-$-clr-orange-600: hsl(24 75% 40%);
-$-clr-orange-700: hsl(24 75% 30%);
-$-clr-orange-800: hsl(24 75% 17.5%);
-$-clr-orange-900: hsl(24 75% 7.5%);
+// $-clr-orange-100: hsl(24 75% 95%);
+// $-clr-orange-200: hsl(24 75% 82.5%);
+// $-clr-orange-300: hsl(24 75% 70%);
+// $-clr-orange-400: hsl(24 75% 60%);
+// $-clr-orange-500: hsl(24 75% 50%);
+// $-clr-orange-600: hsl(24 75% 40%);
+// $-clr-orange-700: hsl(24 75% 30%);
+// $-clr-orange-800: hsl(24 75% 17.5%);
+// $-clr-orange-900: hsl(24 75% 7.5%);
 $-clr-yellow-100: hsl(48 75% 95%);
 $-clr-yellow-200: hsl(48 75% 82.5%);
 $-clr-yellow-300: hsl(48 75% 70%);
@@ -139,17 +139,18 @@ $-clr-red-800: hsl(0 75% 17.5%);
 $-clr-red-900: hsl(0 75% 7.5%);
 
 // barber-shop
-$-clr-orange-300: hsl(8 62% 75%);
+$-clr-orange-300: hsl(8 75% 60%); // added orange-300
 $-clr-orange-400: hsl(8 62% 55%);
 $-clr-orange-500: hsl(8 62% 35%);
 $-clr-brown-100: hsl(33 24% 92%);
-$-clr-brown-200: hsl(33 25% 88%);
+$-clr-brown-200: hsl(33 24% 88%);
 $-clr-brown-300: hsl(33 23% 69%);
 $-clr-brown-400: hsl(22 31% 44%);
 $-clr-brown-700: hsl(20 23% 23%);
 $-clr-brown-800: hsl(18 23% 10%);
+$-clr-brown-900: hsl(18 23% 7%); // added brown-900
 
-$colors: (
+$light: (
   'neutral': (
     '000': $-clr-white,
     '100': $-clr-gray-100,
@@ -175,6 +176,23 @@ $colors: (
     '400': $-clr-brown-400,
     '700': $-clr-brown-700,
     '800': $-clr-brown-800,
+  ),
+);
+$dark: (
+  'neutral': (
+    '100': $-clr-brown-800,
+  ),
+  'accent': (
+    '400': $-clr-orange-300,
+    '500': $-clr-orange-500,
+  ),
+  'primary': (
+    '100': $-clr-brown-900,
+    '200': $-clr-brown-800,
+    '300': $-clr-brown-400,
+    '400': $-clr-brown-300,
+    '700': $-clr-brown-200,
+    '800': $-clr-brown-100,
   ),
 );
 $clr-neu-000: var(--neutral-000);
