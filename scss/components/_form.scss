@@ -1,0 +1,51 @@
+@use '../abstracts' as *;
+
+.contact-form {
+  width: 100%;
+  display: grid;
+  gap: $form-gap;
+
+  grid-template-columns: 1fr;
+  @include mq($desktop) {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .button {
+    // // Position to Left Side
+    // grid-column-start: 0;
+    // justify-self: start;
+
+    // Position to Right Side
+    grid-column-end: -1;
+    justify-self: end;
+
+    margin-top: $form-button-margin-top;
+  }
+}
+
+.form-group {
+  display: flex;
+  text-align: start;
+  flex-direction: column;
+
+  label {
+    font-family: $form-label-font-family;
+    font-size: $form-label-font-size;
+    font-weight: $form-label-font-weight;
+
+    color: $form-label-color;
+  }
+
+  input {
+    padding: $form-input-padding;
+    border-radius: $form-input-border-radius;
+
+    border: $form-input-border-default;
+    &:hover {
+      border: $form-input-border-focus;
+    }
+
+    color: $form-input-color;
+    background-color: $form-input-background-color;
+  }
+}

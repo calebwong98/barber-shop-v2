@@ -60,7 +60,7 @@ $color-text-alternate: $color-primary-100;
 $color-background-default: $color-primary-100;
 $color-background-alternate: $color-primary-200;
 
-$color-accent-primary: $color-primary-100;
+$color-accent-primary: $color-accent-400;
 
 $color-text-interactive-default: $color-primary-100;
 $color-text-interactive-hover: $color-accent-300;
@@ -85,7 +85,7 @@ $size-15: $sz-15; // 10rem,
 // .spacing
 $letter-spacing-loose: 0.16em;
 $padding-block-default: $size-8;
-$gap-default: $size-6;
+$gap-default: $size-8;
 
 // .borderradius
 $border-radius-1: $size-2;
@@ -124,14 +124,22 @@ $link-color: $color-text-interactive-default;
 $link-color-hover: $color-text-interactive-hover;
 
 // _mixins / heading($fs, $color: $heading-color-default)
-$heading-color-default: $color-text-alternate;
-
 $heading-font-family: $font-family-accent;
+$heading-font-size-1: $font-size-900;
+$heading-font-size-2: $font-size-800;
+$heading-font-size-3: $font-size-700;
 $heading-font-weight: $font-weight-bold;
 
 $heading-letter-spacing: $letter-spacing-loose;
 $heading-line-height: 1;
 $heading-text-transform: uppercase;
+
+$heading-color-default: $color-text-alternate;
+$heading-color-1: $color-accent-primary;
+$heading-color-2: $color-accent-400;
+$heading-color-3: $color-primary-400;
+
+$subheading-margin-top: $size-4;
 
 // LAYOUT ________________________________________________________
 
@@ -142,22 +150,26 @@ $container-max-width-narrow: 40rem;
 $container-max-width-wide: 75rem;
 
 // _even-columns / .even-columns
-// _grid-auto-fit / .grid-auto-fit
+// _grid-fit / .grid-fit-auto
+// _grid-fit / .grid-fit-2fr
+// _grid-fit / .grid-fit-3fr
 $grid-gap: $gap-default;
 
 // _flex-group / .flex-group
 $flex-group-gap: $gap-default;
 
 // _flow / .flow
-$flow-spacer: $size-10;
+$flow-gap: $gap-default;
 
 // _section / .section
-$hero-padding-block: $size-13;
 $section-padding-block: $size-13;
+$hero-padding-block: $section-padding-block;
 
-$section-gap: $gap-default;
+$section-gap: $size-12;
+
 $section-justification: space-between;
-$section-alignment: center;
+$section-align-items: center;
+$section-text-align: center;
 
 $section-background-color-alternate: $color-background-alternate;
 
@@ -166,10 +178,10 @@ $section-background-color-alternate: $color-background-alternate;
 //
 
 // COMPONENTS ____________________________________________________
-// *
+
 // _buttons / .button
 $button-font-family: $font-family-base;
-$button-font-size: $font-size-400;
+$button-font-size: $body-font-size;
 $button-font-weight: $font-weight-bold;
 
 $button-padding-default: $size-3 $size-9;
@@ -177,47 +189,64 @@ $button-text-transform: none;
 $button-border-default: 0;
 $button-border-radius: $border-radius-1;
 
-$button-transition: 0;
+$button-transition: 500ms;
 
-$button-primary-color: $color-neutral-100;
+$button-primary-color: $color-text-alternate;
 $button-primary-background: $color-primary-700;
-$button-primary-color-hover: $color-neutral-100;
+$button-primary-color-hover: $color-text-alternate;
 $button-primary-background-hover: $color-primary-800;
 
-$button-accent-color: $color-neutral-100;
-$button-accent-background: $color-accent-400;
-$button-accent-color-hover: $color-neutral-100;
+$button-accent-color: $color-text-alternate;
+$button-accent-background: $color-accent-primary;
+$button-accent-color-hover: $color-text-alternate;
 $button-accent-background-hover: $color-accent-500;
-// *
+
 // _cards / .card
 $card-font-family: $font-family-base;
 
-$card-flow-spacing: $size-2;
+$card-gap: $size-4;
 $card-padding: $size-8;
 $card-line-height: 1.25;
 $card-border-radius: $border-radius-2;
-$card-box-shadow: $box-shadow-1;
 
-$card-color-default: $color-text-default;
-$card-background-default: $color-background-default;
+$card-default-color: $body-color-default;
+$card-default-background: $body-background-color;
+$card-default-box-shadow: $box-shadow-1;
 
-$card-heading-font-size: $font-size-600;
-$card-heading-color-default: $card-color-default;
+$card-accent-color: $color-text-alternate;
+$card-accent-background: $color-accent-primary;
+$card-accent-box-shadow: $box-shadow-1;
+
+// _form / .contact-form
+$form-gap: $gap-default;
+$form-button-margin-top: $size-4;
+
+$form-label-font-family: $font-family-base;
+$form-label-font-size: $body-font-size;
+$form-label-font-weight: $font-weight-bold;
+$form-label-color: $body-color-default;
+
+$form-input-padding: $size-3;
+$form-input-border-radius: $border-radius-1;
+$form-input-border-default: 3px solid $color-background-alternate;
+$form-input-border-focus: 3px solid $color-primary-400;
+$form-input-color: $body-color-default;
+$form-input-background-color: $color-neutral-000;
 
 // _site-header / .site-header
 $site-header-padding-block: $padding-block-default;
 
 $site-header-color: $color-text-alternate;
-$site-header-background-color: $color-text-default;
+$site-header-background-color: $body-color-default;
 
 $site-header-gap: $gap-default;
 $site-header-justification: space-between;
 $site-header-alignment: center;
 
 // _navigation / .nav
-$navigation-spacing: $size-9;
+$navigation-spacing: $gap-default;
 
-$navigation-font-size: $font-size-400;
+$navigation-font-size: $body-font-size;
 $navigation-color: $color-text-interactive-default;
 $navigation-color-hover: $color-text-interactive-hover;
 
@@ -225,7 +254,7 @@ $navigation-color-hover: $color-text-interactive-hover;
 $site-footer-padding-block: $padding-block-default;
 
 $site-footer-color: $color-text-alternate;
-$site-footer-background-color: $color-text-default;
+$site-footer-background-color: $body-color-default;
 
 $site-footer-gap: $gap-default;
 $site-footer-justification: space-between;

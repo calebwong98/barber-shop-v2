@@ -1,5 +1,5 @@
 @use '../abstracts' as *;
 
 .flow > *:where(:not(:first-child)) {
-  margin-top: var(--flow-spacer, $flow-spacer);
+  margin-top: var(--flow-gap, $flow-gap);
 }

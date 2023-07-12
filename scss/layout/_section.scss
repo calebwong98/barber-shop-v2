@@ -1,41 +1,42 @@
 @use '../abstracts' as *;
 
-.section.hero {
-  .section__layout {
-    display: flex;
-    // gap: $section-gap;
-    text-align: center;
-
-    .cta {
-      margin-inline: auto;
-      flex-direction: column;
-      align-items: center;
-    }
-
-    @include mq($desktop) {
-      flex-direction: row;
-      text-align: start;
-
-      .cta {
-        flex-direction: row;
-        margin-inline: 0;
-      }
-    }
-  }
-}
-
 .section {
-  padding-block: $hero-padding-block;
+  padding-block: $section-padding-block;
 
   &__layout {
     display: flex;
     flex-direction: column;
     gap: $section-gap;
+
     justify-content: $section-justification;
-    align-items: $section-alignment;
+    align-items: $section-align-items;
+    text-align: $section-text-align;
   }
 
+  // Section Alternate Background Color
   &:nth-child(even) {
     background-color: $section-background-color-alternate;
+  }
+}
+
+.section.hero {
+  padding-block: $hero-padding-block;
+
+  .section__layout {
+    @include mq($desktop) {
+      flex-direction: row;
+      text-align: start;
+    }
+  }
+}
+
+.cta {
+  margin-inline: auto;
+  flex-direction: column;
+  align-items: center;
+
+  @include mq($desktop) {
+    flex-direction: row;
+    margin-inline: 0;
   }
 }
